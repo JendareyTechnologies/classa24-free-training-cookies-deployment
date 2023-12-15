@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-cookies-deployment
+  labels:
+    app: cookies-webpage-deployment
+    tier: front-end
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cookies-webpage-deployment
+  template:
+    metadata:
+      labels:
+        app: cookies-webpage-deployment
+        tier: front-end
+    spec:
+      containers:
+        - name: cookies-webpage-container
+          image: jendaredocker/jendarey-cookie-company-webpage-main
+          ports:
+            - containerPort: 8080
+
+
+
