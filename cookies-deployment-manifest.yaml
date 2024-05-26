@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cookies-webpage-container
-          image: jendaredocker/jendarey-cookie-company-webpage-main
+          image: jendaredocker/jendarey-cookie-company-webpage-main:breakup
           ports:
             - containerPort: 8080
 
